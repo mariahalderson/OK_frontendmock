@@ -1,0 +1,111 @@
+//fonts
+@font-face {
+    font-family: "OpenSans-regular";
+    src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "OpenSans-italic";
+    src: url("../fonts/OpenSans-Italic.ttf");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "OpenSans-bold";
+    src: url("../fonts/OpenSans-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "OpenSans-light";
+    src: url("/assets/fonts/OpenSans-Light.ttf");
+}
+
+@font-face {
+    font-family: "AbrilFatface";
+    src: url("../fonts/AbrilFatface-Regular.ttf");
+}
+
+//colors
+
+//blue
+$cobalt-blue: #1336c8;
+$navy: #464b62;
+$iceberg: #b2cef7;
+
+//grey
+$concrete: #c9c9c9;
+$light-grey: #eaeaea;
+$paint-white: #f3f3f3;
+$charcoal: #28272a;
+$slate-grey: #5a5a5b;
+$white: #fff;
+
+//other
+$neon-pink: #fe525e;
+$electric-yellow: #ffe371;
+$urban-cactus: #8fca68;
+
+
+//text styles
+
+h1{
+    font-family: 'AbrilFatface';
+    font-size: 52px;
+    color: $charcoal;
+}
+
+h2{
+    font-family: 'OpenSans-light';
+    font-size: 36px;
+    color: $charcoal;
+}
+
+h3{
+    font-family: 'OpenSans-bold';
+    font-size: 21px;
+    color: $charcoal;
+}
+
+h4{
+    font-family: 'OpenSans-bold';
+    font-size: 16px;
+    color: $cobalt-blue;
+    line-height: 22px;
+}
+
+h5{
+    font-family: 'OpenSans-light';
+    font-size: 15px;
+    color: $slate-grey;
+}
+
+.body-text{
+    font-family: 'OpenSans';
+    font-size: 16px;
+    color: $navy;
+    line-height: 24px;
+}
+
+.small-text{
+    font-family: 'OpenSans';
+    font-size: 12px;
+    color: $navy;
+    line-height: 16px;
+}
+
+.intro-text{
+    font-family: 'OpenSans';
+    font-size: 18px;
+    color: $navy;
+    line-height: 28px;
+}
+
+.quote-text{
+    font-family: 'OpenSans-italic';
+    font-size: 24px;
+    color: $paint-white;
+    line-height: 34px;
+}
+
+  
