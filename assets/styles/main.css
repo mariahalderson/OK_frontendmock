@@ -79,6 +79,148 @@ h5 {
   line-height: 34px;
 }
 
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background-color: #1336c8;
+}
+header #logobox {
+  width: 34px;
+  overflow: hidden;
+}
+header #logobox img {
+  max-width: 100%;
+}
+header #navlist {
+  position: fixed;
+  overflow: hidden;
+  top: 60px;
+  left: 0px;
+  height: 0vh;
+  width: 100vw;
+  transition: 0.5s ease-in;
+}
+@media screen and (min-width: 850px) {
+  header #navlist {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: static;
+    height: auto;
+    width: auto;
+  }
+}
+header #navlist .navitem {
+  margin: 20px 16px;
+  list-style-type: none;
+}
+@media screen and (min-width: 850px) {
+  header #navlist .navitem {
+    margin: 0px 16px;
+  }
+}
+header #navlist .navitem a {
+  text-decoration: none;
+}
+@media screen and (min-width: 850px) {
+  header #navlist .navitem a h3 {
+    color: #fff;
+    font-size: 16px;
+  }
+}
+header #navlist .navitem a .downarrow {
+  display: none;
+}
+@media screen and (min-width: 850px) {
+  header #navlist .navitem a .downarrow {
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #fff;
+    margin-left: 7px;
+  }
+}
+header #navlist .navitem .subnav {
+  list-style-type: none;
+  margin: 10px 0px;
+}
+@media screen and (min-width: 850px) {
+  header #navlist .navitem .subnav {
+    position: fixed;
+    top: 56px;
+    left: 0px;
+    height: 0px;
+    width: 100vw;
+    margin: 0;
+    overflow: hidden;
+    background-color: #1336c8;
+    transition: 0.5s ease-in;
+  }
+}
+header #navlist .navitem .subnav li {
+  margin: 8px 0px;
+}
+header #navlist .navitem .subnav li a h4 {
+  color: #5a5a5b;
+}
+header #navlist .navitem .subnav.opensubnav {
+  height: 200px;
+}
+@media screen and (min-width: 850px) {
+  header #navlist #capabilities {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+header .showmenu {
+  height: 100vh !important;
+}
+header #hamburgermenu {
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media screen and (min-width: 850px) {
+  header #hamburgermenu {
+    display: none;
+  }
+}
+header #hamburgermenu .hamburgeritem {
+  background-color: #fff;
+  height: 2px;
+  transition: 0.1s linear;
+}
+header #hamburgermenu .hamburger1 {
+  width: 24px;
+}
+header #hamburgermenu .hamburger2 {
+  width: 12px;
+}
+header #hamburgermenu .hamburger3 {
+  width: 18px;
+}
+header .hamburgeropen .hamburger1 {
+  transform: rotate(45deg) translate(7px, 10px);
+  width: 18px !important;
+}
+header .hamburgeropen .hamburger2 {
+  display: none;
+}
+header .hamburgeropen .hamburger3 {
+  transform: rotate(135deg) translate(-6px, 8px);
+}
+
 * {
   margin: 0;
   padding: 0;
