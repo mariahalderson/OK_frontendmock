@@ -1,5 +1,6 @@
 header{
     position: fixed;
+    z-index: 99;
     top: 0px;
     left: 0px;
     width: 100%;
@@ -7,11 +8,12 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 10px 16px;
-    background-color: $cobalt-blue;
+    //background-color: $cobalt-blue;
 
-    @media #{$desktop}{
-        background-color: rgba($cobalt-blue, 0.9);
-    }
+    //@media #{$desktop}{
+        //background-color: rgba($cobalt-blue, 0.8);
+        background-color: transparent;
+    //}
 
     #logobox{
         width: 34px;
@@ -26,11 +28,12 @@ header{
         //display: none;
         position: fixed;
         overflow: hidden;
-        top: 60px;
+        top: 55px;
         left: 0px;
         height: 0vh;
         width: 100vw;
         transition: 0.5s ease-in;
+        background-color: #fff;
 
         @media #{$desktop}{
             display: flex;
@@ -39,6 +42,7 @@ header{
             position: static;
             height: auto;
             width: auto;
+            background-color: transparent;
         }
 
         .navitem{
@@ -242,6 +246,11 @@ header{
     }
 
     .hamburgeropen{
+        
+        .hamburgeritem{
+            background-color: $charcoal !important;
+        }
+
         .hamburger1{
             transform: rotate(45deg) translate(7px, 10px);
             width: 18px !important;
@@ -253,6 +262,18 @@ header{
 
         .hamburger3{
             transform: rotate(135deg) translate(-6px, 8px);
+        }
+    }
+}
+
+
+//change header colour when menu opens & invert logo colour
+header.changecolour{
+    background-color: $white !important;
+
+    #logobox{
+        img{
+            filter: invert(100%);
         }
     }
 }

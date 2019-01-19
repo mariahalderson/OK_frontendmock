@@ -81,6 +81,7 @@ h5 {
 
 header {
   position: fixed;
+  z-index: 99;
   top: 0px;
   left: 0px;
   width: 100%;
@@ -88,12 +89,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 16px;
-  background-color: #1336c8;
-}
-@media screen and (min-width: 850px) {
-  header {
-    background-color: rgba(19, 54, 200, 0.9);
-  }
+  background-color: transparent;
 }
 header #logobox {
   width: 34px;
@@ -105,11 +101,12 @@ header #logobox img {
 header #navlist {
   position: fixed;
   overflow: hidden;
-  top: 60px;
+  top: 55px;
   left: 0px;
   height: 0vh;
   width: 100vw;
   transition: 0.5s ease-in;
+  background-color: #fff;
 }
 @media screen and (min-width: 850px) {
   header #navlist {
@@ -119,6 +116,7 @@ header #navlist {
     position: static;
     height: auto;
     width: auto;
+    background-color: transparent;
   }
 }
 header #navlist .navitem {
@@ -296,6 +294,9 @@ header #hamburgermenu .hamburger2 {
 header #hamburgermenu .hamburger3 {
   width: 18px;
 }
+header .hamburgeropen .hamburgeritem {
+  background-color: #28272a !important;
+}
 header .hamburgeropen .hamburger1 {
   transform: rotate(45deg) translate(7px, 10px);
   width: 18px !important;
@@ -305,6 +306,39 @@ header .hamburgeropen .hamburger2 {
 }
 header .hamburgeropen .hamburger3 {
   transform: rotate(135deg) translate(-6px, 8px);
+}
+
+header.changecolour {
+  background-color: #fff !important;
+}
+header.changecolour #logobox img {
+  filter: invert(100%);
+}
+
+#landingPage {
+  height: 100vh;
+  background: url("../../images/bckgd.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#landingPage .landingPage_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0px 16px;
+  position: relative;
+  background-color: rgba(19, 54, 200, 0.8);
+}
+#landingPage .landingPage_content .site-title {
+  color: #fff;
+}
+#landingPage .landingPage_content .body-text {
+  color: #f3f3f3;
+}
+#landingPage .landingPage_content .main-button {
+  position: absolute;
+  bottom: 20px;
 }
 
 * {
@@ -319,11 +353,16 @@ header .hamburgeropen .hamburger3 {
   display: none;
 }
 
-main {
-  height: 100vh;
-  background: url("../../images/bckgd.jpg");
-  background-size: cover;
-  background-position: center;
+.button {
+  padding: 21px 34px;
+  max-width: 225px;
+  background-color: #ffe371;
+  color: #28272a;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "OpenSans-regular";
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=main.css.map */
