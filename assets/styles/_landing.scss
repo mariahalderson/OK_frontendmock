@@ -1,0 +1,63 @@
+#landingPage{
+    height: 100vh;
+    background: url("../../images/bckgd.jpg");
+    background-size: cover;
+    background-position: center;
+    //display: flex;
+    //flex-direction: column;
+    //justify-content: center;
+
+    .landingPage_content{
+    	display: flex;
+    	flex-direction: column;
+    	justify-content: center;
+    	height: 100%;
+    	padding: 0px 16px;
+    	position: relative;
+    	//top: 56px;
+    	background-color: rgba($cobalt-blue, 0.8);
+
+    	.site-title{
+    		color: $white;
+    		//max-width: 80%;
+    		text-align: center;
+    	}
+
+    	.body-text{
+    		color: $paint-white;
+    	}
+
+    	.main-button{
+    		position: absolute;
+    		bottom: 20px;
+
+    		@media #{$desktop}{
+    			bottom: 50%;
+    			margin-bottom: -200px;
+    		}
+    	}
+
+    	.landingPage_explore{
+    		display: flex;
+    		flex-direction: column;
+    		align-items: center;
+    		position: absolute;
+    		bottom: 20px;
+    		left: 50%;
+    		margin-left: -44px;
+
+   			.explore-text{
+   				font-size: 25px;
+   				margin-bottom: 10px;
+   				text-align: center;
+   			}
+
+   			.explore-arrow{
+				border-left: 20px solid transparent;
+			    border-right: 20px solid transparent;
+			    border-top: 20px solid $white;
+			    margin: 0;
+   			}
+    	}
+    }
+}
