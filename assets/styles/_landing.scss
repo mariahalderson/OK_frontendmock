@@ -19,6 +19,7 @@
 
     	.site-title{
     		color: $white;
+    		max-width: 80%;
     	}
 
     	.body-text{
@@ -28,6 +29,11 @@
     	.main-button{
     		position: absolute;
     		bottom: 20px;
+
+    		@media #{$desktop}{
+    			bottom: 50%;
+    			margin-bottom: -200px;
+    		}
     	}
     }
 }

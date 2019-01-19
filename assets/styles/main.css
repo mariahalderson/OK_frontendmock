@@ -332,6 +332,7 @@ header.changecolour #logobox img {
 }
 #landingPage .landingPage_content .site-title {
   color: #fff;
+  max-width: 80%;
 }
 #landingPage .landingPage_content .body-text {
   color: #f3f3f3;
@@ -339,6 +340,12 @@ header.changecolour #logobox img {
 #landingPage .landingPage_content .main-button {
   position: absolute;
   bottom: 20px;
+}
+@media screen and (min-width: 850px) {
+  #landingPage .landingPage_content .main-button {
+    bottom: 50%;
+    margin-bottom: -200px;
+  }
 }
 
 * {

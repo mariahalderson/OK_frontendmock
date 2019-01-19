@@ -8,7 +8,15 @@ var hamburger = document.querySelector("#hamburgermenu"),
     hamburger.addEventListener("click", function(){
         hamburger.classList.toggle("hamburgeropen");
         sitenav.classList.toggle("showmenu");
-        siteheader.classList.toggle("changecolour");
+
+        //keep header white until nav finishes closing
+        if(siteheader.classList.contains("changecolour")){
+            setTimeout(function(){
+                siteheader.classList.remove("changecolour");
+            },500);
+        }else{
+            siteheader.classList.add("changecolour");
+        }
     });
 
     arrow.addEventListener("click", function(){
