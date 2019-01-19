@@ -93,11 +93,16 @@ header{
                 }
 
                 .subnav-title{
+                    display: none;
+
+                    @media #{$desktop}{
+                    display: block;
                     grid-column: 1 / 3;
                     grid-row-start: 1;
                     max-width: 280px;
                     margin-right:0;
                     margin-left: 16px;
+                }
 
                     .title{
                         font-size: 36px;

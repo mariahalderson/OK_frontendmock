@@ -173,11 +173,17 @@ header #navlist .navitem .subnav {
   }
 }
 header #navlist .navitem .subnav .subnav-title {
-  grid-column: 1/3;
-  grid-row-start: 1;
-  max-width: 280px;
-  margin-right: 0;
-  margin-left: 16px;
+  display: none;
+}
+@media screen and (min-width: 850px) {
+  header #navlist .navitem .subnav .subnav-title {
+    display: block;
+    grid-column: 1/3;
+    grid-row-start: 1;
+    max-width: 280px;
+    margin-right: 0;
+    margin-left: 16px;
+  }
 }
 header #navlist .navitem .subnav .subnav-title .title {
   font-size: 36px;
