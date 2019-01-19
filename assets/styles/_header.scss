@@ -19,6 +19,10 @@ header{
         width: 34px;
         overflow: hidden;
 
+        @media #{$desktop}{
+            width: 150px;
+        }
+
         img{
             max-width: 100%;
         }
@@ -65,6 +69,7 @@ header{
 
                 .downarrow{
                     display: none;
+                    transition: 0.2s linear;
 
                     @media #{$desktop}{
                         display: block;
@@ -92,7 +97,8 @@ header{
                     width: 100vw;
                     margin: 0;
                     overflow: hidden;
-                    background-color: rgba($cobalt-blue, 0.9);
+                    //background-color: rgba($cobalt-blue, 0.9);
+                    background-color: $white;
                     transition: 0.5s ease-in;
                 }
 
@@ -111,7 +117,7 @@ header{
                     .title{
                         font-size: 36px;
                         font-family: 'OpenSans-bold';
-                        color: $white;
+                        color: $charcoal;
                         margin-bottom: 20px;
                     }
 
@@ -179,12 +185,12 @@ header{
                     }
 
                     .navbutton{
-                        padding: 10px 0;
-                        width: 90%;
-                        border: 1px solid $white;
-                        color: $white;
-                        text-align: center;
-                        font-family: 'openSans-regular';
+                        //padding: 10px 0;
+                        //width: 90%;
+                        //border: 1px solid $white;
+                        color: $charcoal;
+                        //text-align: center;
+                        //font-family: 'openSans-regular';
                         //align-self: flex-end;
                         position: absolute;
                         bottom: 0px;
@@ -196,6 +202,13 @@ header{
                 //display: block;
                 height: 350px;
                 padding: 50px 0;
+                background-color: $white;
+
+                a{
+                    h4{
+                        color: $charcoal
+                    }
+                }
             }
         }
 
@@ -275,5 +288,18 @@ header.changecolour{
         img{
             filter: invert(100%);
         }
+    }
+
+    #navlist{
+        .navitem{
+            h3{
+                color: $charcoal;
+            }
+        }
+    }
+
+    .downarrow{
+        border-top: 7px solid $charcoal !important;
+        transform: rotate(180deg);
     }
 }
