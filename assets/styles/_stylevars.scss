@@ -18,7 +18,7 @@
 
 @font-face {
     font-family: "OpenSans-light";
-    src: url("/assets/fonts/OpenSans-Light.ttf");
+    src: url("../fonts/OpenSans-Light.ttf");
 }
 
 @font-face {
@@ -114,6 +114,7 @@ h5{
 
 
 //media queries
+$tablet: 'screen and (min-width: 600px)';
 $desktop: 'screen and (min-width: 850px)';
 
   

@@ -14,7 +14,7 @@
 }
 @font-face {
   font-family: "OpenSans-light";
-  src: url("/assets/fonts/OpenSans-Light.ttf");
+  src: url("../fonts/OpenSans-Light.ttf");
 }
 @font-face {
   font-family: "AbrilFatface";
@@ -380,6 +380,86 @@ header.changecolour .downarrow {
   margin: 0;
 }
 
+.bckgd-container {
+  background: linear-gradient(-45deg, #eaeaea 55%, #fff 55%, #fff 100%);
+}
+@media screen and (min-width: 600px) {
+  .bckgd-container {
+    background: linear-gradient(-45deg, #eaeaea 45%, #fff 45%, #fff 100%);
+  }
+}
+@media screen and (min-width: 850px) {
+  .bckgd-container {
+    background: linear-gradient(-25deg, #eaeaea 55%, #fff 55%, #fff 100%);
+  }
+}
+
+@media screen and (min-width: 850px) {
+  #whoWeAre .whoWeAre_content {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
+#whoWeAre .whoWeAre_content .whoWeAre_img {
+  max-width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+#whoWeAre .whoWeAre_content .whoWeAre_img img {
+  max-width: 100%;
+}
+@media screen and (min-width: 850px) {
+  #whoWeAre .whoWeAre_content .whoWeAre_copy {
+    max-width: 60%;
+  }
+}
+#whoWeAre .whoWeAre_content .whoWeAre_copy h5 {
+  font-family: "OpenSans-light";
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 600px) {
+  #whoWeAre .whoWeAre_content .whoWeAre_copy h2 {
+    max-width: 80%;
+  }
+}
+#whoWeAre .whoWeAre_content .whoWeAre_copy h2:after {
+  content: "";
+  display: block;
+  width: 25%;
+  height: 3px;
+  margin: 25px 0;
+  background-color: #28272a;
+}
+@media screen and (min-width: 600px) {
+  #whoWeAre .whoWeAre_content .whoWeAre_copy p {
+    max-width: 90%;
+  }
+}
+#whoWeAre .whoWeAre_content .whoWeAre_copy .workbutton {
+  display: block;
+  margin-top: 50px;
+}
+
+#ourClients .clients_logos {
+  width: 100%;
+  margin-top: 50px;
+  padding: 0px 16px;
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+}
+#ourClients .clients_logos .logocontainer {
+  margin: 0 15px;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+#ourClients .clients_logos .logocontainer img {
+  max-width: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -390,6 +470,10 @@ header.changecolour .downarrow {
 
 .hide {
   display: none;
+}
+
+.sitesection {
+  padding: 50px 16px;
 }
 
 .button {

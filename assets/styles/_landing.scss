@@ -61,3 +61,122 @@
     	}
     }
 }
+
+
+
+
+
+
+.bckgd-container{
+    background: linear-gradient(-45deg, $light-grey 55%, $white 55%, $white 100%);
+
+    @media #{$tablet}{
+        background: linear-gradient(-45deg, $light-grey 45%, $white 45%, $white 100%);
+    }
+
+    @media #{$desktop}{
+        background: linear-gradient(-25deg, $light-grey 55%, $white 55%, $white 100%);
+    }
+}
+
+
+    //---------- WHO WE ARE SECTION ----------//
+#whoWeAre{
+    
+    // background: linear-gradient(-45deg, $light-grey 25%, $white 25%, $white 100%);
+
+    // @media #{$desktop}{
+    //     background: linear-gradient(to bottom right, $white 70%, $light-grey 70%, $light-grey 100%);
+    // }
+
+    .whoWeAre_content{
+        @media #{$desktop}{
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+            }
+
+        .whoWeAre_img{
+            max-width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            margin-bottom: 50px;
+
+            img{
+                max-width: 100%;
+            }
+        }
+
+        .whoWeAre_copy{
+
+            @media #{$desktop}{
+                max-width: 60%;
+            }
+
+            h5{
+                font-family: 'OpenSans-light';
+                margin-bottom: 25px;
+            }
+
+            h2{
+                @media #{$tablet}{
+                    max-width: 80%;
+                }
+
+                &:after{
+                    content: '';
+                    display: block;
+                    width: 25%;
+                    height: 3px;
+                    margin: 25px 0;
+                    background-color: $charcoal
+                }
+            }
+
+            p{
+                @media #{$tablet}{
+                    max-width: 90%;
+                }
+            }
+
+            .workbutton{
+                display: block;
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+    //---------- CLIENTS SECTION ----------//
+
+#ourClients{
+
+    .clients_logos{
+        width: 100%;
+        margin-top: 50px;
+        padding: 0px 16px;
+        justify-content: space-evenly;
+        display: flex;
+        flex-wrap: wrap;
+
+        .logocontainer{
+            margin: 0 15px;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+}
+
