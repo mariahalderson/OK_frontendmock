@@ -380,9 +380,20 @@ header.changecolour .downarrow {
   margin: 0;
 }
 
-#whoWeAre {
-  background: linear-gradient(to bottom right, #fff 70%, #eaeaea 70%, #eaeaea 100%);
+.bckgd-container {
+  background: linear-gradient(-45deg, #eaeaea 55%, #fff 55%, #fff 100%);
 }
+@media screen and (min-width: 600px) {
+  .bckgd-container {
+    background: linear-gradient(-45deg, #eaeaea 45%, #fff 45%, #fff 100%);
+  }
+}
+@media screen and (min-width: 850px) {
+  .bckgd-container {
+    background: linear-gradient(-25deg, #eaeaea 55%, #fff 55%, #fff 100%);
+  }
+}
+
 @media screen and (min-width: 850px) {
   #whoWeAre .whoWeAre_content {
     display: flex;
@@ -429,6 +440,24 @@ header.changecolour .downarrow {
 #whoWeAre .whoWeAre_content .whoWeAre_copy .workbutton {
   display: block;
   margin-top: 50px;
+}
+
+#ourClients .clients_logos {
+  width: 100%;
+  margin-top: 50px;
+  padding: 0px 16px;
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+}
+#ourClients .clients_logos .logocontainer {
+  margin: 0 15px;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+#ourClients .clients_logos .logocontainer img {
+  max-width: 100%;
 }
 
 * {
