@@ -1,0 +1,102 @@
+footer{
+	background-color: $cobalt-blue;
+	padding-top: 50px;
+
+	@media #{$tablet}{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.footer_brandinfo{
+
+		@media #{$tablet}{
+			max-width: 40%;
+		}
+
+		.logo-container{
+			width: 90%;
+	        overflow: hidden;
+
+	        @media screen and (min-width: 400px){
+	        	width: 200px;
+	        }
+
+	        @media #{$desktop}{
+	            width: 150px;
+	        }
+
+	        img{
+	            max-width: 100%;
+	        }
+		}
+
+		.body-text{
+			margin: 15px 0;
+			padding: 15px;
+			font-size: 12px;
+			color: $white;
+		}
+	}
+
+	.footer_navigation{
+		margin: 15px 0;
+		padding: 15px;
+
+		@media #{$tablet}{
+			width: 45%;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		div{
+			margin-bottom: 25px; 
+
+			.footer_subtitle{
+				color: $white;
+				text-transform: uppercase;
+			}
+
+			ul{
+				list-style-type: none;
+				li{
+					margin: 5px 0;
+					a{
+						text-decoration: none;
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+
+	.footer_socialnavigation{
+		background-color: $navy;
+		display: flex;
+		flex-direction: column-reverse;
+		padding: 25px 16px;
+
+		@media #{$tablet}{
+			width: 100vw;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		.copyright{
+			font-size: 12px;
+			color: $white;
+		}
+
+		ul{
+			list-style-type: none;
+			display: flex;
+			li{
+				margin: 0 5px;
+				a{
+					text-decoration: none;
+					color: $white;
+				}
+			}
+		}
+	}
+}

@@ -399,6 +399,8 @@ header.changecolour .downarrow {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    padding-left: 70px;
+    padding-top: 50px;
   }
 }
 #whoWeAre .whoWeAre_content .whoWeAre_img {
@@ -417,20 +419,11 @@ header.changecolour .downarrow {
 }
 #whoWeAre .whoWeAre_content .whoWeAre_copy h5 {
   font-family: "OpenSans-light";
-  margin-bottom: 25px;
 }
 @media screen and (min-width: 600px) {
   #whoWeAre .whoWeAre_content .whoWeAre_copy h2 {
     max-width: 80%;
   }
-}
-#whoWeAre .whoWeAre_content .whoWeAre_copy h2:after {
-  content: "";
-  display: block;
-  width: 25%;
-  height: 3px;
-  margin: 25px 0;
-  background-color: #28272a;
 }
 @media screen and (min-width: 600px) {
   #whoWeAre .whoWeAre_content .whoWeAre_copy p {
@@ -442,6 +435,12 @@ header.changecolour .downarrow {
   margin-top: 50px;
 }
 
+@media screen and (min-width: 850px) {
+  #ourClients {
+    margin-top: 100px;
+    padding: 50px 70px 100px 70px;
+  }
+}
 #ourClients .clients_logos {
   width: 100%;
   margin-top: 50px;
@@ -460,12 +459,144 @@ header.changecolour .downarrow {
   max-width: 100%;
 }
 
+#newsletter {
+  background-color: #fff;
+}
+@media screen and (min-width: 850px) {
+  #newsletter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 70px;
+  }
+}
+#newsletter .image-container {
+  max-width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 850px) {
+  #newsletter .image-container {
+    max-width: 500px;
+    margin: 0;
+  }
+}
+#newsletter .image-container img {
+  max-width: 100%;
+}
+#newsletter .newsletter_button {
+  display: block;
+  margin-top: 50px;
+}
+
+footer {
+  background-color: #1336c8;
+  padding-top: 50px;
+}
+@media screen and (min-width: 600px) {
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 600px) {
+  footer .footer_brandinfo {
+    max-width: 40%;
+  }
+}
+footer .footer_brandinfo .logo-container {
+  width: 90%;
+  overflow: hidden;
+}
+@media screen and (min-width: 400px) {
+  footer .footer_brandinfo .logo-container {
+    width: 200px;
+  }
+}
+@media screen and (min-width: 850px) {
+  footer .footer_brandinfo .logo-container {
+    width: 150px;
+  }
+}
+footer .footer_brandinfo .logo-container img {
+  max-width: 100%;
+}
+footer .footer_brandinfo .body-text {
+  margin: 15px 0;
+  padding: 15px;
+  font-size: 12px;
+  color: #fff;
+}
+footer .footer_navigation {
+  margin: 15px 0;
+  padding: 15px;
+}
+@media screen and (min-width: 600px) {
+  footer .footer_navigation {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+footer .footer_navigation div {
+  margin-bottom: 25px;
+}
+footer .footer_navigation div .footer_subtitle {
+  color: #fff;
+  text-transform: uppercase;
+}
+footer .footer_navigation div ul {
+  list-style-type: none;
+}
+footer .footer_navigation div ul li {
+  margin: 5px 0;
+}
+footer .footer_navigation div ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+footer .footer_socialnavigation {
+  background-color: #464b62;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 25px 16px;
+}
+@media screen and (min-width: 600px) {
+  footer .footer_socialnavigation {
+    width: 100vw;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+footer .footer_socialnavigation .copyright {
+  font-size: 12px;
+  color: #fff;
+}
+footer .footer_socialnavigation ul {
+  list-style-type: none;
+  display: flex;
+}
+footer .footer_socialnavigation ul li {
+  margin: 0 5px;
+}
+footer .footer_socialnavigation ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
 * {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
+}
+
+main {
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 .hide {
@@ -486,6 +617,19 @@ header.changecolour .downarrow {
   text-transform: uppercase;
   font-family: "OpenSans-regular";
   font-size: 16px;
+}
+
+.subtitle {
+  margin-bottom: 25px;
+}
+
+.title:after {
+  content: "";
+  display: block;
+  width: 25%;
+  height: 3px;
+  margin: 25px 0;
+  background-color: #28272a;
 }
 
 .downarrow {
