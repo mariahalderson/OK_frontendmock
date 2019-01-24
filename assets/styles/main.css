@@ -586,6 +586,60 @@ footer .footer_socialnavigation ul li a {
   color: #fff;
 }
 
+#hero {
+  height: 100vh;
+  width: 100vw;
+  background: url("../../images/content-bckgd.jpeg");
+  background-position: center;
+  background-size: cover;
+}
+#hero .title-block {
+  background-color: #1336c8;
+  padding: 25px 15px;
+  margin-top: 50px;
+}
+#hero .title-block h2 {
+  color: #eaeaea;
+}
+#hero .title-block h5 {
+  color: #fff;
+  margin-top: 25px;
+}
+#hero .content_navigation {
+  display: none;
+}
+
+#contentAbout .about_title .button {
+  display: block;
+  margin: 40px 0;
+}
+#contentAbout .about_copy p {
+  margin-bottom: 40px;
+}
+#contentAbout .about_quote {
+  background-color: #1336c8;
+  padding: 25px 15px;
+}
+#contentAbout .about_quote .body-text {
+  color: #eaeaea;
+  margin-top: 25px;
+}
+#contentAbout .about_lovedby {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#contentAbout .about_lovedby h5 {
+  width: 100%;
+}
+#contentAbout .about_lovedby .logocontainer {
+  width: 100px;
+}
+#contentAbout .about_lovedby .logocontainer img {
+  max-width: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
