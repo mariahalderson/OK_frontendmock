@@ -1,0 +1,105 @@
+	//---------- HERO SECTION ----------//
+#hero{
+	height: 100vh;
+	width: 100vw;
+	background: url("../../images/content-bckgd.jpeg");
+	background-position: center;
+	background-size: cover;
+
+	.title-block{
+		background-color: $cobalt-blue;
+		padding: 25px 15px;
+		margin-top: 50px;
+
+		h2{
+			color: $light-grey;
+		}
+
+		h5{
+			color: $white;
+			margin-top: 25px;
+		}
+
+	}
+
+	.content_navigation{
+		display: none;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+	//---------- ABOUT SECTION ----------//
+	#contentAbout{
+
+		.about_title{
+
+			.button{
+				display: block;
+				margin: 40px 0;
+			}
+
+		}
+
+		.about_copy{
+			//margin-top: 40px;
+
+			p{
+				margin-bottom: 40px;
+			}
+		}
+
+		.about_quote{
+			background-color: $cobalt-blue;
+			padding: 25px 15px;
+
+			.body-text{
+				color: $light-grey;
+				margin-top: 25px;
+			}
+		}
+
+		.about_lovedby{
+			margin-top: 40px;
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+
+			h5{
+				width: 100%;
+			
+			}
+
+			.logocontainer{
+				width:100px;
+
+				img{
+					max-width: 100%;
+				}
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
