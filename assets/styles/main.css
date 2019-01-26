@@ -23,6 +23,7 @@
 h1 {
   font-family: "AbrilFatface";
   font-size: 52px;
+  font-weight: 200;
   color: #28272a;
 }
 
@@ -491,7 +492,7 @@ header.changecolour .downarrow {
 }
 
 footer {
-  background-color: #1336c8;
+  background-color: #28272a;
   padding-top: 50px;
 }
 @media screen and (min-width: 600px) {
