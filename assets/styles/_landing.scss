@@ -53,10 +53,11 @@
    			}
 
    			.explore-arrow{
-				border-left: 20px solid transparent;
-			    border-right: 20px solid transparent;
-			    border-top: 20px solid $white;
+				border-left: 12px solid transparent;
+			    border-right: 12px solid transparent;
+			    border-top: 12px solid $white;
 			    margin: 0;
+                //margin-top: 90px;
    			}
     	}
     }
@@ -88,15 +89,16 @@
     // @media #{$desktop}{
     //     background: linear-gradient(to bottom right, $white 70%, $light-grey 70%, $light-grey 100%);
     // }
-
-    .whoWeAre_content{
-        @media #{$desktop}{
-                display: flex;
+    @media #{$desktop}{
+               // display: flex;
                 flex-direction: row-reverse;
                 align-items: center;
-                padding-left: 70px;
-                padding-top: 50px;
+                //padding-left: 70px;
+                //padding-top: 50px;
             }
+
+    //.whoWeAre_content{
+        
 
         .whoWeAre_img{
             max-width: 80%;
@@ -131,12 +133,6 @@
                     max-width: 90%;
                 }
             }
-
-            .workbutton{
-                display: block;
-                margin-top: 50px;
-            }
-        }
     }
 }
 
@@ -154,9 +150,15 @@
 
     @media #{$desktop}{
         margin-top: 100px;
-        padding: 50px 70px 100px 70px;
+        flex-wrap: wrap;
+        //padding: 50px 70px 100px 70px;
 
     }
+
+    h2{
+        width: 100%;
+    }
+
     .clients_logos{
         width: 100%;
         margin-top: 50px;
@@ -191,10 +193,10 @@
     background-color: $white;
 
     @media #{$desktop}{
-        display: flex;
+        //display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 50px 70px;
+        //padding: 50px 70px;
     }
 
     .image-container{
@@ -211,11 +213,6 @@
         img{
             max-width: 100%;
         }
-    }
-
-    .newsletter_button{
-        display: block;
-        margin-top: 50px;
     }
 }
 

@@ -1,4 +1,5 @@
 @import 'stylevars';
+@import 'animations';
 @import 'header';
 @import 'landing';
 @import 'footer';
@@ -23,9 +24,16 @@ main{
 
 .sitesection{
     padding: 50px 16px;
+    display: flex;
+
+    @media #{$desktop}{
+        padding: 50px 70px;
+    }
 }
 
 .button{
+    display: block;
+    margin-top: 50px;
     padding: 21px 34px;
     max-width: 225px;
     background-color: $electric-yellow;

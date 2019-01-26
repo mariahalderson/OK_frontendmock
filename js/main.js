@@ -6,6 +6,13 @@ var hamburger = document.querySelector("#hamburgermenu"),
     logo = document.querySelector("#logobox img"),
     capabilities = document.querySelector("#capabilities");
 
+//explore arrow on home page
+var exploreArrow = document.querySelector("#exploreArrow");
+
+
+
+
+
     //change logo from icon to full
 if (matchMedia) {
 
@@ -13,6 +20,7 @@ const mq = window.matchMedia("(min-width: 850px)");
 mq.addListener(WidthChange);
 WidthChange(mq);
 }
+
 
     // media query change
 function WidthChange(mq) {
@@ -27,6 +35,7 @@ function WidthChange(mq) {
     }
 }
 
+
     //keep header white until nav finishes closing
 function headerColour(){
     
@@ -39,12 +48,27 @@ function headerColour(){
     }
 }
 
+
     //open subnav at desktop
 function desktopDropDown(){
     subnav.classList.toggle("opensubnav");
     headerColour();
 }
 
+
+    //run animation on explore arrow
+function arrowAnimation(){
+    setTimeout(function(){
+        exploreArrow.style.animationPlayState = "paused";
+    },900);
+    setTimeout(function(){
+        exploreArrow.style.animationPlayState = "running";
+    },3600);
+}
+
+var arrowInt = setInterval(arrowAnimation, 3600);
+
+//arrowAnimation();
 
     //-------EVENT LISTENERS/CLICK FUNCTIONS----------//
 
@@ -54,10 +78,3 @@ hamburger.addEventListener("click", function(){
     headerColour();
         
 });
-
-if(desktop){
-    capabilities.addEventListener("click", function(){
-        subnav.classList.toggle("opensubnav");
-        headerColour();
-    });
-}
