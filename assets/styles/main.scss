@@ -1,4 +1,5 @@
 @import 'stylevars';
+@import 'animations';
 @import 'header';
 @import 'landing';
 @import 'footer';
@@ -16,16 +17,23 @@ main{
     overflow-x: hidden;
     max-width: 100vw;
 }
-   
+
 .hide{
     display:none;
 }
 
 .sitesection{
     padding: 50px 16px;
+    display: flex;
+
+    @media #{$desktop}{
+        padding: 50px 70px;
+    }
 }
 
 .button{
+    display: block;
+    margin-top: 50px;
     padding: 21px 34px;
     max-width: 225px;
     background-color: $electric-yellow;
@@ -54,11 +62,20 @@ main{
 
 .downarrow{
     display: block;
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
     border-top: 7px solid $white;
     margin-left: 7px;
 }
 
+.gridsection{
+	//display: flex;
+	@media #{$desktop}{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-column-gap: 16px;
+		padding: 50px 25px;
+	}
+}

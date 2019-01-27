@@ -1,3 +1,4 @@
+
 	//---------- HERO SECTION ----------//
 #hero{
 	height: 100vh;
@@ -10,6 +11,11 @@
 		background-color: $cobalt-blue;
 		padding: 25px 15px;
 		margin-top: 50px;
+		height: fit-content;
+
+	  @media #{$desktop}{
+			max-width: 350px;
+		}
 
 		h2{
 			color: $light-grey;
@@ -29,7 +35,35 @@
 }
 
 
+///////////
 
+.section-column{
+	margin-top: 40px;
+	padding: 0 15px;
+
+	h4{
+		margin: 15px 0 25px 0;
+	}
+}
+
+.icon-container{
+	width: 75px;
+	height: 75px;
+
+	img{
+		width: 100%;
+	}
+}
+
+// .gridsection{
+// 	display: flex;
+// 	@media #{$desktop}{
+// 		display: grid;
+// 		grid-template-columns: repeat(3, 1fr);
+// 		grid-column-gap: 16px;
+// 		padding: 50px 25px;
+// 	}
+// }
 
 
 
@@ -38,6 +72,14 @@
 
 	//---------- ABOUT SECTION ----------//
 	#contentAbout{
+		flex-direction: column;
+
+		// @media #{$desktop}{
+		// 	display: grid;
+		// 	grid-template-columns: repeat(3, 1fr);
+		// 	grid-column-gap: 16px;
+		// 	padding: 50px 25px;
+		// }
 
 		.about_title{
 
@@ -74,7 +116,6 @@
 
 			h5{
 				width: 100%;
-			
 			}
 
 			.logocontainer{
@@ -95,6 +136,15 @@
 
 
 
+	//---------- RESULTS SECTION ----------//
+	#results{
+		flex-direction: column;
+
+		.results-title{
+			grid-column: 1 / -1;
+			//grid-row-start: 1;
+		}
+	}
 
 
 
@@ -103,3 +153,82 @@
 
 
 
+
+	//---------- FINAL SECTION ----------//
+	#finalSection{
+		flex-direction: column;
+
+		@media #{$desktop}{
+			padding: 50px 40px;
+		}
+
+		@media screen and (min-width: 1080px){
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 16px;
+			align-items: center;
+		}
+
+		.final-title{
+			@media screen and (min-width: 1080px){
+				grid-column: 1 / -1;
+			}
+		}
+
+		.section-image{
+			margin-top: 40px;
+			max-width: 100%;
+
+			@media screen and (min-width: 1080px){
+				grid-column: 2/-1;
+				grid-row: 2 / 3;
+			}
+
+			img{
+				max-width: 100%;
+			}
+		}
+
+		.paragraph-grid{
+
+			@media #{$desktop}{
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-column-gap: 16px;
+			}
+
+			@media screen and (min-width: 1080px){
+				grid-column: 1 / 2;
+				grid-row: 2 / 3;
+			}
+
+			p{
+				margin: 12.5px 0;
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+	//---------- CALL TO ACTION ----------//
+	#callToAction{
+		flex-direction: column;
+
+		@media #{$tablet}{
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.button{
+			@media #{$tablet}{
+				margin: 0;
+			}
+		}
+	}

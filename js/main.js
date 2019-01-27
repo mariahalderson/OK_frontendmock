@@ -4,7 +4,14 @@ var hamburger = document.querySelector("#hamburgermenu"),
     sitenav = document.querySelector("#navlist"),
     subnav = document.querySelector(".subnav"),
     logo = document.querySelector("#logobox img"),
-    arrow = document.querySelector(".downarrow");
+    capabilities = document.querySelector("#capabilities");
+
+//explore arrow on home page
+var exploreArrow = document.querySelector("#exploreArrow");
+
+
+
+
 
     //change logo from icon to full
 if (matchMedia) {
@@ -14,15 +21,20 @@ mq.addListener(WidthChange);
 WidthChange(mq);
 }
 
+
     // media query change
 function WidthChange(mq) {
 
     if (mq.matches) {
         logo.src="images/OK_fullHorizontal.svg";
+        capabilities.addEventListener("click", desktopDropDown);
+ 
     } else {
         logo.src="images/OK_whiteSymbol.svg";
+        capabilities.removeEventListener("click", desktopDropDown);
     }
 }
+
 
     //keep header white until nav finishes closing
 function headerColour(){
@@ -37,6 +49,29 @@ function headerColour(){
 }
 
 
+    //open subnav at desktop
+function desktopDropDown(){
+    subnav.classList.toggle("opensubnav");
+    headerColour();
+}
+
+
+    //run animation on explore arrow
+function arrowAnimation(){
+    setTimeout(function(){
+        exploreArrow.style.animationPlayState = "paused";
+    },900);
+    setTimeout(function(){
+        exploreArrow.style.animationPlayState = "running";
+    },3600);
+}
+
+if(exploreArrow){
+    var arrowInt = setInterval(arrowAnimation, 3600);
+}
+
+//arrowAnimation();
+
     //-------EVENT LISTENERS/CLICK FUNCTIONS----------//
 
 hamburger.addEventListener("click", function(){
@@ -44,9 +79,4 @@ hamburger.addEventListener("click", function(){
     sitenav.classList.toggle("showmenu");
     headerColour();
         
-});
-
-arrow.addEventListener("click", function(){
-    subnav.classList.toggle("opensubnav");
-    headerColour();
 });
