@@ -66,7 +66,9 @@ function arrowAnimation(){
     },3600);
 }
 
-var arrowInt = setInterval(arrowAnimation, 3600);
+if(exploreArrow){
+    var arrowInt = setInterval(arrowAnimation, 3600);
+}
 
 //arrowAnimation();
 
