@@ -232,3 +232,50 @@
 			}
 		}
 	}
+
+
+
+
+
+
+
+
+
+	//----------CLIENT CASES----------//
+	 #clientCases{
+			 flex-direction: column;
+			 .client-title{
+					 margin-bottom: 40px;
+					 h4, h2{
+							 margin-bottom: 25px;
+					 }
+			 }
+	 }
+	 .content-tile{
+			 width: 100%;
+			 -webkit-box-shadow: 1px 1px 19px 0px rgba(0,0,0,0.1);
+			 -moz-box-shadow: 1px 1px 19px 0px rgba(0,0,0,0.1);
+			 box-shadow: 1px 1px 19px 0px rgba(0,0,0,0.1);
+			 padding: 20px 10px;
+			 border-radius: 5px;
+			 margin-bottom: 25px;
+			 @media #{$desktop}{
+					 display: grid;
+					 grid-template-columns: 1fr 1fr;
+					 grid-column-gap: 40px;
+			 }
+			 .image-container{
+					 max-width: 100%;
+					 overflow: hidden;
+					 img{
+							 max-width: 100%;
+							 @media #{$desktop}{
+									 max-width: none;
+									 max-height: 100%;
+							 }
+					 }
+			 }
+			 h4{
+					 margin-bottom: 25px;
+			 }
+	 }
