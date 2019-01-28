@@ -640,6 +640,128 @@ footer .footer_socialnavigation ul li a {
   max-width: 100%;
 }
 
+<<<<<<< Updated upstream
+=======
+#results {
+  flex-direction: column;
+}
+#results .results-title {
+  grid-column: 1/-1;
+}
+
+#finalSection {
+  flex-direction: column;
+}
+@media screen and (min-width: 850px) {
+  #finalSection {
+    padding: 50px 40px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  #finalSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 16px;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1080px) {
+  #finalSection .final-title {
+    grid-column: 1/-1;
+  }
+}
+#finalSection .section-image {
+  margin-top: 40px;
+  max-width: 100%;
+}
+@media screen and (min-width: 1080px) {
+  #finalSection .section-image {
+    grid-column: 2/-1;
+    grid-row: 2/3;
+  }
+}
+#finalSection .section-image img {
+  max-width: 100%;
+}
+@media screen and (min-width: 850px) {
+  #finalSection .paragraph-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 35px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  #finalSection .paragraph-grid {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
+#finalSection .paragraph-grid p {
+  margin: 12.5px 0;
+}
+
+#callToAction {
+  flex-direction: column;
+  border-top: 1px solid #1336c8;
+  border-bottom: 1px solid #1336c8;
+}
+@media screen and (min-width: 600px) {
+  #callToAction {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 600px) {
+  #callToAction .button {
+    margin: 0;
+  }
+}
+
+#clientCases {
+  flex-direction: column;
+}
+#clientCases .client-title {
+  margin-bottom: 40px;
+}
+#clientCases .client-title h4, #clientCases .client-title h2 {
+  margin-bottom: 25px;
+}
+
+.content-tile {
+  width: 100%;
+  -webkit-box-shadow: 1px 1px 19px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 1px 1px 19px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 19px 0px rgba(0, 0, 0, 0.1);
+  padding: 20px 10px;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 850px) {
+  .content-tile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 40px;
+  }
+}
+.content-tile .image-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+.content-tile .image-container img {
+  max-width: 100%;
+}
+@media screen and (min-width: 850px) {
+  .content-tile .image-container img {
+    max-width: none;
+    max-height: 100%;
+  }
+}
+.content-tile h4 {
+  margin-bottom: 25px;
+}
+
+>>>>>>> Stashed changes
 * {
   margin: 0;
   padding: 0;
@@ -696,4 +818,16 @@ main {
   margin-left: 7px;
 }
 
+<<<<<<< Updated upstream
+=======
+@media screen and (min-width: 850px) {
+  .gridsection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 35px;
+    padding: 50px 25px;
+  }
+}
+
+>>>>>>> Stashed changes
 /*# sourceMappingURL=main.css.map */
