@@ -8,6 +8,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 10px 16px;
+    transition: all 0.4s ease;
     //background-color: $cobalt-blue;
 
     //@media #{$desktop}{
@@ -15,7 +16,7 @@ header{
         background-color: transparent;
     //}
 
-    #logobox{
+    #headerLogo{
         width: 34px;
         overflow: hidden;
 
@@ -28,7 +29,7 @@ header{
         }
     }
 
-    #navlist{
+    #mainNavigation{
         //display: none;
         position: fixed;
         overflow: hidden;
@@ -73,8 +74,8 @@ header{
 
                     @media #{$desktop}{
                         display: block;
-                        width: 0; 
-                        height: 0; 
+                        width: 0;
+                        height: 0;
                         border-left: 7px solid transparent;
                         border-right: 7px solid transparent;
                         border-top: 7px solid $white;
@@ -178,7 +179,7 @@ header{
 
                     .navdesc{
                         display: none;
-    
+
                         @media #{$desktop}{
                             display: block;
                         }
@@ -220,7 +221,7 @@ header{
                 align-items: center;
             }
         }
-        
+
     }
 
     .showmenu{
@@ -238,7 +239,7 @@ header{
         @media #{$desktop}{
             display: none;
         }
-        
+
         .hamburgeritem{
             background-color: $white;
             height: 2px;
@@ -260,7 +261,7 @@ header{
     }
 
     .hamburgeropen{
-        
+
         .hamburgeritem{
             background-color: $charcoal !important;
         }
@@ -303,4 +304,11 @@ header.changecolour{
         border-top: 7px solid $charcoal !important;
         transform: rotate(180deg);
     }
+}
+
+
+
+//change to charcoal 80% opacity on scroll
+header.scrollcolour{
+  background-color: rgba($charcoal, 0.8);
 }

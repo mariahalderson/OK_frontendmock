@@ -331,21 +331,22 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 16px;
+  transition: all 0.4s ease;
   background-color: transparent;
 }
-header #logobox {
+header #headerLogo {
   width: 34px;
   overflow: hidden;
 }
 @media screen and (min-width: 850px) {
-  header #logobox {
+  header #headerLogo {
     width: 150px;
   }
 }
-header #logobox img {
+header #headerLogo img {
   max-width: 100%;
 }
-header #navlist {
+header #mainNavigation {
   position: fixed;
   overflow: hidden;
   top: 55px;
@@ -356,7 +357,7 @@ header #navlist {
   background-color: #fff;
 }
 @media screen and (min-width: 850px) {
-  header #navlist {
+  header #mainNavigation {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -366,30 +367,30 @@ header #navlist {
     background-color: transparent;
   }
 }
-header #navlist .navitem {
+header #mainNavigation .navitem {
   margin: 20px 16px;
   list-style-type: none;
 }
 @media screen and (min-width: 850px) {
-  header #navlist .navitem {
+  header #mainNavigation .navitem {
     margin: 0px 16px;
   }
 }
-header #navlist .navitem a {
+header #mainNavigation .navitem a {
   text-decoration: none;
 }
 @media screen and (min-width: 850px) {
-  header #navlist .navitem a h3 {
+  header #mainNavigation .navitem a h3 {
     color: #fff;
     font-size: 16px;
   }
 }
-header #navlist .navitem a .downarrow {
+header #mainNavigation .navitem a .downarrow {
   display: none;
   transition: 0.2s linear;
 }
 @media screen and (min-width: 850px) {
-  header #navlist .navitem a .downarrow {
+  header #mainNavigation .navitem a .downarrow {
     display: block;
     width: 0;
     height: 0;
@@ -399,12 +400,12 @@ header #navlist .navitem a .downarrow {
     margin-left: 7px;
   }
 }
-header #navlist .navitem .subnav {
+header #mainNavigation .navitem .subnav {
   list-style-type: none;
   margin: 10px 0px;
 }
 @media screen and (min-width: 850px) {
-  header #navlist .navitem .subnav {
+  header #mainNavigation .navitem .subnav {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     position: fixed;
@@ -418,11 +419,11 @@ header #navlist .navitem .subnav {
     transition: 0.5s ease-in;
   }
 }
-header #navlist .navitem .subnav .subnav-title {
+header #mainNavigation .navitem .subnav .subnav-title {
   display: none;
 }
 @media screen and (min-width: 850px) {
-  header #navlist .navitem .subnav .subnav-title {
+  header #mainNavigation .navitem .subnav .subnav-title {
     display: block;
     grid-column: 1/3;
     grid-row-start: 1;
@@ -431,20 +432,20 @@ header #navlist .navitem .subnav .subnav-title {
     margin-left: 16px;
   }
 }
-header #navlist .navitem .subnav .subnav-title .title {
+header #mainNavigation .navitem .subnav .subnav-title .title {
   font-size: 36px;
   font-family: "OpenSans-bold";
   color: #28272a;
   margin-bottom: 20px;
 }
-header #navlist .navitem .subnav .subnav-title .body-text {
+header #mainNavigation .navitem .subnav .subnav-title .body-text {
   color: #333;
 }
-header #navlist .navitem .subnav li {
+header #mainNavigation .navitem .subnav li {
   margin: 8px 0px;
 }
 @media screen and (min-width: 850px) {
-  header #navlist .navitem .subnav li {
+  header #mainNavigation .navitem .subnav li {
     padding: 0px 10px;
     display: flex;
     flex-direction: column;
@@ -453,61 +454,61 @@ header #navlist .navitem .subnav li {
   }
 }
 @media screen and (min-width: 850px) {
-  header #navlist .navitem .subnav li:first-child {
+  header #mainNavigation .navitem .subnav li:first-child {
     grid-column: 3/4;
     grid-row-start: 1;
   }
 }
 @media screen and (min-width: 850px) {
-  header #navlist .navitem .subnav li:nth-child(2) {
+  header #mainNavigation .navitem .subnav li:nth-child(2) {
     grid-column: 4/5;
     grid-row-start: 1;
   }
 }
 @media screen and (min-width: 850px) {
-  header #navlist .navitem .subnav li:nth-child(3) {
+  header #mainNavigation .navitem .subnav li:nth-child(3) {
     grid-column: 5/-1;
     grid-row-start: 1;
   }
 }
-header #navlist .navitem .subnav li a h4 {
+header #mainNavigation .navitem .subnav li a h4 {
   color: #5a5a5b;
 }
 @media screen and (min-width: 850px) {
-  header #navlist .navitem .subnav li a h4 {
+  header #mainNavigation .navitem .subnav li a h4 {
     color: #fff;
     margin-bottom: 20px;
     font-size: 20px;
   }
 }
-header #navlist .navitem .subnav li p {
+header #mainNavigation .navitem .subnav li p {
   color: #28272a;
   font-size: 14px;
 }
-header #navlist .navitem .subnav li .navdesc {
+header #mainNavigation .navitem .subnav li .navdesc {
   display: none;
 }
 @media screen and (min-width: 850px) {
-  header #navlist .navitem .subnav li .navdesc {
+  header #mainNavigation .navitem .subnav li .navdesc {
     display: block;
   }
 }
-header #navlist .navitem .subnav li .navbutton {
+header #mainNavigation .navitem .subnav li .navbutton {
   margin: 0;
   color: #28272a;
   position: absolute;
   bottom: 0px;
 }
-header #navlist .navitem .subnav.opensubnav {
+header #mainNavigation .navitem .subnav.opensubnav {
   height: 350px;
   padding: 50px 0;
   background-color: #fff;
 }
-header #navlist .navitem .subnav.opensubnav a h4 {
+header #mainNavigation .navitem .subnav.opensubnav a h4 {
   color: #28272a;
 }
 @media screen and (min-width: 850px) {
-  header #navlist #capabilities {
+  header #mainNavigation #capabilities {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -568,6 +569,10 @@ header.changecolour #navlist .navitem h3 {
 header.changecolour .downarrow {
   border-top: 7px solid #28272a !important;
   transform: rotate(180deg);
+}
+
+header.scrollcolour {
+  background-color: rgba(40, 39, 42, 0.8);
 }
 
 #landingPage {
@@ -819,32 +824,32 @@ footer .footer_socialnavigation ul li a {
   color: #fff;
 }
 
-#hero {
+.hero {
   height: 100vh;
   width: 100vw;
   background: url("../../images/content-bckgd.jpeg");
   background-position: center;
   background-size: cover;
 }
-#hero .title-block {
+.hero .title-block {
   background-color: #1336c8;
   padding: 25px 15px;
   margin-top: 50px;
   height: fit-content;
 }
 @media screen and (min-width: 850px) {
-  #hero .title-block {
+  .hero .title-block {
     max-width: 350px;
   }
 }
-#hero .title-block h2 {
+.hero .title-block h2 {
   color: #eaeaea;
 }
-#hero .title-block h5 {
+.hero .title-block h5 {
   color: #fff;
   margin-top: 25px;
 }
-#hero .content_navigation {
+.hero .content_navigation {
   display: none;
 }
 
@@ -956,29 +961,29 @@ footer .footer_socialnavigation ul li a {
   margin: 12.5px 0;
 }
 
-#callToAction {
+.call-to-action {
   flex-direction: column;
 }
 @media screen and (min-width: 600px) {
-  #callToAction {
+  .call-to-action {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 }
 @media screen and (min-width: 600px) {
-  #callToAction .button {
+  .call-to-action .button {
     margin: 0;
   }
 }
 
-#clientCases {
+.tile-section {
   flex-direction: column;
 }
-#clientCases .client-title {
+.tile-section .client-title {
   margin-bottom: 40px;
 }
-#clientCases .client-title h4, #clientCases .client-title h2 {
+.tile-section .client-title h4, .tile-section .client-title h2 {
   margin-bottom: 25px;
 }
 
@@ -998,15 +1003,15 @@ footer .footer_socialnavigation ul li a {
     grid-column-gap: 40px;
   }
 }
-.content-tile .image-container {
+.content-tile .tile-image-container {
   max-width: 100%;
   overflow: hidden;
 }
-.content-tile .image-container img {
+.content-tile .tile-image-container img {
   max-width: 100%;
 }
 @media screen and (min-width: 850px) {
-  .content-tile .image-container img {
+  .content-tile .tile-image-container img {
     max-width: none;
     max-height: 100%;
   }
@@ -1083,7 +1088,7 @@ main {
   .gridsection {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 16px;
+    grid-column-gap: 75px;
     padding: 50px 25px;
   }
 }

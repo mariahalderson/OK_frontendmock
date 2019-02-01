@@ -1,6 +1,6 @@
 
 	//---------- HERO SECTION ----------//
-#hero{
+.hero{
 	height: 100vh;
 	width: 100vw;
 	background: url("../../images/content-bckgd.jpeg");
@@ -217,7 +217,7 @@
 
 
 	//---------- CALL TO ACTION ----------//
-	#callToAction{
+	.call-to-action{
 		flex-direction: column;
 
 		@media #{$tablet}{
@@ -242,7 +242,7 @@
 
 
 	//----------CLIENT CASES----------//
-	 #clientCases{
+	 .tile-section{
 			 flex-direction: column;
 			 .client-title{
 					 margin-bottom: 40px;
@@ -264,7 +264,7 @@
 					 grid-template-columns: 1fr 1fr;
 					 grid-column-gap: 40px;
 			 }
-			 .image-container{
+			 .tile-image-container{
 					 max-width: 100%;
 					 overflow: hidden;
 					 img{
