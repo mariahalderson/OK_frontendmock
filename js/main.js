@@ -1,9 +1,9 @@
 //hamburger menu open/close
 var hamburger = document.querySelector("#hamburgermenu"),
     siteheader = document.querySelector("header"),
-    sitenav = document.querySelector("#navlist"),
+    mainNav = document.querySelector("#mainNavigation"),
     subnav = document.querySelector(".subnav"),
-    logo = document.querySelector("#logobox img"),
+    logo = document.querySelector("#headerLogo img"),
     capabilities = document.querySelector("#capabilities");
 
 //explore arrow on home page
@@ -28,7 +28,7 @@ function WidthChange(mq) {
     if (mq.matches) {
         logo.src="images/OK_fullHorizontal.svg";
         capabilities.addEventListener("click", desktopDropDown);
- 
+
     } else {
         logo.src="images/OK_whiteSymbol.svg";
         capabilities.removeEventListener("click", desktopDropDown);
@@ -38,7 +38,7 @@ function WidthChange(mq) {
 
     //keep header white until nav finishes closing
 function headerColour(){
-    
+
     if(siteheader.classList.contains("changecolour")){
         setTimeout(function(){
             siteheader.classList.remove("changecolour");
@@ -47,6 +47,19 @@ function headerColour(){
         siteheader.classList.add("changecolour");
     }
 }
+
+
+  //change header colour after scroll
+function headerScroll(){
+  let heroHeight = document.querySelector("#hero").offsetHeight;
+  if(window.scrollY > heroHeight){
+    siteheader.classList.add("scrollcolour");
+  }if(window.scrollY < heroHeight){
+    siteheader.classList.remove("scrollcolour");
+  }
+}
+
+window.addEventListener('scroll', headerScroll);
 
 
     //open subnav at desktop
@@ -76,7 +89,7 @@ if(exploreArrow){
 
 hamburger.addEventListener("click", function(){
     hamburger.classList.toggle("hamburgeropen");
-    sitenav.classList.toggle("showmenu");
+    mainNav.classList.toggle("showmenu");
     headerColour();
-        
+
 });
