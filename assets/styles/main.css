@@ -560,7 +560,7 @@ header .hamburgeropen .hamburger3 {
 header.changecolour {
   background-color: #fff !important;
 }
-header.changecolour #logobox img {
+header.changecolour #headerLogo img {
   filter: invert(100%);
 }
 header.changecolour #navlist .navitem h3 {
@@ -739,9 +739,23 @@ footer {
     justify-content: space-between;
   }
 }
+@media screen and (min-width: 850px) {
+  footer .footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
 @media screen and (min-width: 600px) {
   footer .footer_brandinfo {
     max-width: 40%;
+  }
+}
+@media screen and (min-width: 850px) {
+  footer .footer_brandinfo {
+    max-width: 60%;
   }
 }
 footer .footer_brandinfo .logo-container {
@@ -778,6 +792,11 @@ footer .footer_navigation {
     justify-content: space-between;
   }
 }
+@media screen and (min-width: 850px) {
+  footer .footer_navigation {
+    width: 60%;
+  }
+}
 footer .footer_navigation div {
   margin-bottom: 25px;
 }
@@ -796,7 +815,7 @@ footer .footer_navigation div ul li a {
   color: #fff;
 }
 footer .footer_socialnavigation {
-  background-color: #464b62;
+  background-color: #28272a;
   display: flex;
   flex-direction: column-reverse;
   padding: 25px 16px;
@@ -806,6 +825,12 @@ footer .footer_socialnavigation {
     width: 100vw;
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+@media screen and (min-width: 850px) {
+  footer .footer_socialnavigation {
+    width: 80%;
+    grid-column: 1/-1;
   }
 }
 footer .footer_socialnavigation .copyright {
@@ -839,7 +864,8 @@ footer .footer_socialnavigation ul li a {
 }
 @media screen and (min-width: 850px) {
   .hero .title-block {
-    max-width: 350px;
+    max-width: 450px;
+    padding: 25px 40px;
   }
 }
 .hero .title-block h2 {
@@ -853,12 +879,13 @@ footer .footer_socialnavigation ul li a {
   display: none;
 }
 
+h4, h2 {
+  margin-bottom: 25px;
+}
+
 .section-column {
   margin-top: 40px;
   padding: 0 15px;
-}
-.section-column h4 {
-  margin: 15px 0 25px 0;
 }
 
 .icon-container {
@@ -892,6 +919,11 @@ footer .footer_socialnavigation ul li a {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+@media screen and (min-width: 850px) {
+  #contentAbout .about_lovedby {
+    grid-column: 1/-1;
+  }
 }
 #contentAbout .about_lovedby h5 {
   width: 100%;
@@ -977,14 +1009,11 @@ footer .footer_socialnavigation ul li a {
   }
 }
 
-.tile-section {
+.tile-section, .sitesection.tile-section {
   flex-direction: column;
 }
-.tile-section .client-title {
+.tile-section .client-title, .sitesection.tile-section .client-title {
   margin-bottom: 40px;
-}
-.tile-section .client-title h4, .tile-section .client-title h2 {
-  margin-bottom: 25px;
 }
 
 .content-tile {
@@ -1020,6 +1049,44 @@ footer .footer_socialnavigation ul li a {
   margin-bottom: 25px;
 }
 
+.contact-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 850px) {
+  .contact-section {
+    justify-content: space-between;
+  }
+}
+.contact-section .contact-copy {
+  max-width: 45%;
+}
+
+.form {
+  margin-top: 40px;
+}
+@media screen and (min-width: 850px) {
+  .form {
+    min-width: 35%;
+    margin-left: 100px;
+    margin-top: 0px;
+  }
+}
+.form form {
+  display: flex;
+  flex-direction: column;
+}
+.form form .button {
+  border: none;
+}
+.form input, .form textarea {
+  border: none;
+  border-bottom: 1px solid #eaeaea;
+  padding: 10px 0;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1040,10 +1107,12 @@ main {
 .sitesection {
   padding: 50px 16px;
   display: flex;
+  flex-direction: column;
 }
 @media screen and (min-width: 850px) {
   .sitesection {
     padding: 50px 70px;
+    flex-direction: row;
   }
 }
 
