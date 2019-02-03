@@ -321,6 +321,21 @@ h5 {
   animation: bounce-top 0.9s ease-out 3.6s infinite both;
 }
 
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  10% {
+    transform: translateY(8px);
+  }
+  20% {
+    transform: translateY(0px);
+  }
+}
+.float {
+  animation: float 5s ease-out infinite;
+}
+
 header {
   position: fixed;
   z-index: 99;
@@ -333,6 +348,20 @@ header {
   padding: 10px 16px;
   transition: all 0.4s ease;
   background-color: transparent;
+}
+@media screen and (min-width: 850px) {
+  header {
+    display: block;
+  }
+}
+header .header-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 header #headerLogo {
   width: 34px;
@@ -560,10 +589,10 @@ header .hamburgeropen .hamburger3 {
 header.changecolour {
   background-color: #fff !important;
 }
-header.changecolour #logobox img {
+header.changecolour #headerLogo img {
   filter: invert(100%);
 }
-header.changecolour #navlist .navitem h3 {
+header.changecolour #mainNavigation .navitem h3 {
   color: #28272a;
 }
 header.changecolour .downarrow {
@@ -739,9 +768,23 @@ footer {
     justify-content: space-between;
   }
 }
+@media screen and (min-width: 850px) {
+  footer .footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
 @media screen and (min-width: 600px) {
   footer .footer_brandinfo {
     max-width: 40%;
+  }
+}
+@media screen and (min-width: 850px) {
+  footer .footer_brandinfo {
+    max-width: 60%;
   }
 }
 footer .footer_brandinfo .logo-container {
@@ -778,6 +821,11 @@ footer .footer_navigation {
     justify-content: space-between;
   }
 }
+@media screen and (min-width: 850px) {
+  footer .footer_navigation {
+    width: 60%;
+  }
+}
 footer .footer_navigation div {
   margin-bottom: 25px;
 }
@@ -796,7 +844,7 @@ footer .footer_navigation div ul li a {
   color: #fff;
 }
 footer .footer_socialnavigation {
-  background-color: #464b62;
+  background-color: #28272a;
   display: flex;
   flex-direction: column-reverse;
   padding: 25px 16px;
@@ -806,6 +854,12 @@ footer .footer_socialnavigation {
     width: 100vw;
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+@media screen and (min-width: 850px) {
+  footer .footer_socialnavigation {
+    width: 80%;
+    grid-column: 1/-1;
   }
 }
 footer .footer_socialnavigation .copyright {
@@ -839,7 +893,8 @@ footer .footer_socialnavigation ul li a {
 }
 @media screen and (min-width: 850px) {
   .hero .title-block {
-    max-width: 350px;
+    max-width: 450px;
+    padding: 25px 40px;
   }
 }
 .hero .title-block h2 {
@@ -853,12 +908,13 @@ footer .footer_socialnavigation ul li a {
   display: none;
 }
 
+h4, h2 {
+  margin-bottom: 25px;
+}
+
 .section-column {
   margin-top: 40px;
   padding: 0 15px;
-}
-.section-column h4 {
-  margin: 15px 0 25px 0;
 }
 
 .icon-container {
@@ -892,6 +948,11 @@ footer .footer_socialnavigation ul li a {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+@media screen and (min-width: 850px) {
+  #contentAbout .about_lovedby {
+    grid-column: 1/-1;
+  }
 }
 #contentAbout .about_lovedby h5 {
   width: 100%;
@@ -939,6 +1000,8 @@ footer .footer_socialnavigation ul li a {
   #finalSection .section-image {
     grid-column: 2/-1;
     grid-row: 2/3;
+    max-width: 500px;
+    justify-self: end;
   }
 }
 #finalSection .section-image img {
@@ -948,7 +1011,11 @@ footer .footer_socialnavigation ul li a {
   #finalSection .paragraph-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 16px;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    height: 100%;
+    justify-items: center;
+    align-content: start;
   }
 }
 @media screen and (min-width: 1080px) {
@@ -963,10 +1030,12 @@ footer .footer_socialnavigation ul li a {
 
 .call-to-action {
   flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 @media screen and (min-width: 600px) {
   .call-to-action {
-    flex-direction: row;
+    flex-direction: row !important;
     justify-content: space-between;
     align-items: center;
   }
@@ -977,14 +1046,11 @@ footer .footer_socialnavigation ul li a {
   }
 }
 
-.tile-section {
+.tile-section, .sitesection.tile-section {
   flex-direction: column;
 }
-.tile-section .client-title {
+.tile-section .client-title, .sitesection.tile-section .client-title {
   margin-bottom: 40px;
-}
-.tile-section .client-title h4, .tile-section .client-title h2 {
-  margin-bottom: 25px;
 }
 
 .content-tile {
@@ -1000,12 +1066,19 @@ footer .footer_socialnavigation ul li a {
   .content-tile {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 40px;
+    grid-column-gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
 .content-tile .tile-image-container {
   max-width: 100%;
   overflow: hidden;
+}
+@media screen and (min-width: 1200px) {
+  .content-tile .tile-image-container {
+    max-height: 400px;
+  }
 }
 .content-tile .tile-image-container img {
   max-width: 100%;
@@ -1016,7 +1089,51 @@ footer .footer_socialnavigation ul li a {
     max-height: 100%;
   }
 }
+@media screen and (min-width: 1200px) {
+  .content-tile .tile-image-container img {
+    min-width: 100%;
+    max-height: none;
+  }
+}
 .content-tile h4 {
+  margin-bottom: 25px;
+}
+
+.contact-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 850px) {
+  .contact-section {
+    justify-content: space-between;
+  }
+}
+.contact-section .contact-copy {
+  max-width: 45%;
+}
+
+.form {
+  margin-top: 40px;
+}
+@media screen and (min-width: 850px) {
+  .form {
+    min-width: 35%;
+    margin-left: 100px;
+    margin-top: 0px;
+  }
+}
+.form form {
+  display: flex;
+  flex-direction: column;
+}
+.form form .button {
+  border: none;
+}
+.form input, .form textarea {
+  border: none;
+  border-bottom: 1px solid #eaeaea;
+  padding: 10px 0;
+  font-size: 16px;
   margin-bottom: 25px;
 }
 
@@ -1040,10 +1157,12 @@ main {
 .sitesection {
   padding: 50px 16px;
   display: flex;
+  flex-direction: column;
 }
 @media screen and (min-width: 850px) {
   .sitesection {
     padding: 50px 70px;
+    flex-direction: row;
   }
 }
 

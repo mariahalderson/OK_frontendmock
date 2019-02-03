@@ -8,10 +8,25 @@ footer{
 		justify-content: space-between;
 	}
 
+	.footer-container{
+
+		@media #{$desktop}{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			justify-items: center;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+	}
+
 	.footer_brandinfo{
 
 		@media #{$tablet}{
 			max-width: 40%;
+		}
+
+		@media #{$desktop}{
+			max-width: 60%;
 		}
 
 		.logo-container{
@@ -49,8 +64,13 @@ footer{
 			justify-content: space-between;
 		}
 
+		@media #{$desktop}{
+			width: 60%;
+			//display: block;
+		}
+
 		div{
-			margin-bottom: 25px; 
+			margin-bottom: 25px;
 
 			.footer_subtitle{
 				color: $white;
@@ -71,7 +91,7 @@ footer{
 	}
 
 	.footer_socialnavigation{
-		background-color: $navy;
+		background-color: $charcoal;
 		display: flex;
 		flex-direction: column-reverse;
 		padding: 25px 16px;
@@ -80,6 +100,11 @@ footer{
 			width: 100vw;
 			flex-direction: row;
 			justify-content: space-between;
+		}
+
+		@media #{$desktop}{
+			width: 80%;
+			grid-column: 1 / -1;
 		}
 
 		.copyright{

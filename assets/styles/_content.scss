@@ -14,7 +14,8 @@
 		height: fit-content;
 
 	  @media #{$desktop}{
-			max-width: 350px;
+			max-width: 450px;
+			padding: 25px 40px;
 		}
 
 		h2{
@@ -34,6 +35,10 @@
 
 }
 
+h4, h2{
+		margin-bottom: 25px;
+}
+
 
 ///////////
 
@@ -41,9 +46,9 @@
 	margin-top: 40px;
 	padding: 0 15px;
 
-	h4{
-		margin: 15px 0 25px 0;
-	}
+	// h4{
+	// 	margin: 15px 0 25px 0;
+	// }
 }
 
 .icon-container{
@@ -114,6 +119,10 @@
 			justify-content: space-around;
 			flex-wrap: wrap;
 
+			@media #{$desktop}{
+				grid-column: 1 / -1;
+			}
+
 			h5{
 				width: 100%;
 			}
@@ -182,6 +191,9 @@
 			@media screen and (min-width: 1080px){
 				grid-column: 2/-1;
 				grid-row: 2 / 3;
+				max-width: 500px; //--for portrait img
+				//max-width: 100%; //--for landscape
+				justify-self: end;
 			}
 
 			img{
@@ -194,7 +206,11 @@
 			@media #{$desktop}{
 				display: grid;
 				grid-template-columns: 1fr 1fr;
-				grid-column-gap: 16px;
+				grid-column-gap: 40px;
+				grid-row-gap: 40px;
+				height: 100%;
+				justify-items: center;
+				align-content: start;
 			}
 
 			@media screen and (min-width: 1080px){
@@ -219,9 +235,11 @@
 	//---------- CALL TO ACTION ----------//
 	.call-to-action{
 		flex-direction: column;
+		max-width: 1200px;
+		margin: 0 auto;
 
 		@media #{$tablet}{
-			flex-direction: row;
+			flex-direction: row !important;
 			justify-content: space-between;
 			align-items: center;
 		}
@@ -242,13 +260,13 @@
 
 
 	//----------CLIENT CASES----------//
-	 .tile-section{
+	 .tile-section, .sitesection.tile-section{
 			 flex-direction: column;
 			 .client-title{
 					 margin-bottom: 40px;
-					 h4, h2{
-							 margin-bottom: 25px;
-					 }
+					 // h4, h2{
+						// 	 margin-bottom: 25px;
+					 // }
 			 }
 	 }
 	 .content-tile{
@@ -259,19 +277,33 @@
 			 padding: 20px 10px;
 			 border-radius: 5px;
 			 margin-bottom: 25px;
+
 			 @media #{$desktop}{
 					 display: grid;
 					 grid-template-columns: 1fr 1fr;
-					 grid-column-gap: 40px;
+					 grid-column-gap: 20px;
+					 max-width: 1200px;
+					 margin: 0 auto;
+					 // justify-content: start;
 			 }
 			 .tile-image-container{
 					 max-width: 100%;
 					 overflow: hidden;
+
+					 @media screen and (min-width: 1200px){
+						 max-height: 400px;
+					 }
+
 					 img{
 							 max-width: 100%;
 							 @media #{$desktop}{
 									 max-width: none;
 									 max-height: 100%;
+							 }
+
+							 @media screen and (min-width: 1200px){
+								 min-width: 100%;
+								 max-height: none;
 							 }
 					 }
 			 }
