@@ -354,15 +354,14 @@ header {
     display: block;
   }
 }
-@media screen and (min-width: 850px) {
-  header .header-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
-  }
+header .header-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 header #headerLogo {
   width: 34px;
@@ -1036,7 +1035,7 @@ h4, h2 {
 }
 @media screen and (min-width: 600px) {
   .call-to-action {
-    flex-direction: row;
+    flex-direction: row !important;
     justify-content: space-between;
     align-items: center;
   }

@@ -191,7 +191,8 @@ h4, h2{
 			@media screen and (min-width: 1080px){
 				grid-column: 2/-1;
 				grid-row: 2 / 3;
-				max-width: 500px;
+				max-width: 500px; //--for portrait img
+				//max-width: 100%; //--for landscape
 				justify-self: end;
 			}
 
@@ -238,7 +239,7 @@ h4, h2{
 		margin: 0 auto;
 
 		@media #{$tablet}{
-			flex-direction: row;
+			flex-direction: row !important;
 			justify-content: space-between;
 			align-items: center;
 		}
@@ -276,6 +277,7 @@ h4, h2{
 			 padding: 20px 10px;
 			 border-radius: 5px;
 			 margin-bottom: 25px;
+
 			 @media #{$desktop}{
 					 display: grid;
 					 grid-template-columns: 1fr 1fr;
