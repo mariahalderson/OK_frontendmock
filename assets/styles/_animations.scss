@@ -271,3 +271,20 @@
   -webkit-animation: bounce-top 0.9s ease-out 3.6s infinite both;
           animation: bounce-top 0.9s ease-out 3.6s infinite both;
 }
+
+@keyframes float{
+  0%{
+    transform: translateY(0px);
+  }
+  10%{
+    transform: translateY(8px);
+  }
+  20%{
+    transform: translateY(0px);
+  }
+
+}
+
+.float{
+  animation: float 5s ease-out infinite;
+}
