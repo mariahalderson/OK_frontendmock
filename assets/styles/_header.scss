@@ -15,6 +15,20 @@ header{
         //background-color: rgba($cobalt-blue, 0.8);
         background-color: transparent;
     //}
+    @media #{$desktop}{
+      display: block;
+    }
+
+    .header-content{
+      @media #{$desktop}{
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+      }
+    }
 
     #headerLogo{
         width: 34px;
@@ -292,7 +306,7 @@ header.changecolour{
         }
     }
 
-    #navlist{
+    #mainNavigation{
         .navitem{
             h3{
                 color: $charcoal;

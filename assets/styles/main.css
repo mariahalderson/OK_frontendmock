@@ -334,6 +334,21 @@ header {
   transition: all 0.4s ease;
   background-color: transparent;
 }
+@media screen and (min-width: 850px) {
+  header {
+    display: block;
+  }
+}
+@media screen and (min-width: 850px) {
+  header .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
 header #headerLogo {
   width: 34px;
   overflow: hidden;
@@ -563,7 +578,7 @@ header.changecolour {
 header.changecolour #headerLogo img {
   filter: invert(100%);
 }
-header.changecolour #navlist .navitem h3 {
+header.changecolour #mainNavigation .navitem h3 {
   color: #28272a;
 }
 header.changecolour .downarrow {
