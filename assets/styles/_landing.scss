@@ -69,21 +69,21 @@
 
 
 .bckgd-container{
-    background: linear-gradient(-45deg, $light-grey 55%, $white 55%, $white 100%);
+    background: linear-gradient(-45deg, $white 35%, $light-grey 55%, $white 55%, $white 100%);
 
     @media #{$tablet}{
-        background: linear-gradient(-45deg, $light-grey 45%, $white 45%, $white 100%);
+        background: linear-gradient(-45deg, $white 25%, $light-grey 45%, $white 45%, $white 100%);
     }
 
     @media #{$desktop}{
-        background: linear-gradient(-25deg, $light-grey 55%, $white 55%, $white 100%);
+        background: linear-gradient(-25deg, $white 35%, $light-grey 55%, $white 55%, $white 100%);
     }
 }
 
 
     //---------- WHO WE ARE SECTION ----------//
 #whoWeAre{
-    
+
     // background: linear-gradient(-45deg, $light-grey 25%, $white 25%, $white 100%);
 
     // @media #{$desktop}{
@@ -98,7 +98,7 @@
             }
 
     //.whoWeAre_content{
-        
+
 
         .whoWeAre_img{
             max-width: 80%;
@@ -190,7 +190,7 @@
 
     //---------- NEWSLETTER SECTION -----------//
 #newsletter{
-    background-color: $white;
+    //background-color: $white;
 
     @media #{$desktop}{
         //display: flex;
@@ -216,4 +216,3 @@
         }
     }
 }
-

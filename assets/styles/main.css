@@ -669,16 +669,16 @@ header.scrollcolour {
 }
 
 .bckgd-container {
-  background: linear-gradient(-45deg, #eaeaea 55%, #fff 55%, #fff 100%);
+  background: linear-gradient(-45deg, #fff 35%, #eaeaea 55%, #fff 55%, #fff 100%);
 }
 @media screen and (min-width: 600px) {
   .bckgd-container {
-    background: linear-gradient(-45deg, #eaeaea 45%, #fff 45%, #fff 100%);
+    background: linear-gradient(-45deg, #fff 25%, #eaeaea 45%, #fff 45%, #fff 100%);
   }
 }
 @media screen and (min-width: 850px) {
   .bckgd-container {
-    background: linear-gradient(-25deg, #eaeaea 55%, #fff 55%, #fff 100%);
+    background: linear-gradient(-25deg, #fff 35%, #eaeaea 55%, #fff 55%, #fff 100%);
   }
 }
 
@@ -743,9 +743,6 @@ header.scrollcolour {
   max-width: 100%;
 }
 
-#newsletter {
-  background-color: #fff;
-}
 @media screen and (min-width: 850px) {
   #newsletter {
     align-items: center;
