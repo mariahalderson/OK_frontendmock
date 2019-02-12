@@ -50,13 +50,17 @@ function headerColour(){
 
 
   //change header colour after scroll
-function headerScroll(){
-  let heroHeight = document.querySelector("#hero").offsetHeight;
-  if(window.scrollY > heroHeight){
-    siteheader.classList.add("scrollcolour");
-  }if(window.scrollY < heroHeight){
-    siteheader.classList.remove("scrollcolour");
+if(document.querySelector("#hero")){
+  function headerScroll(){
+    let heroHeight = document.querySelector("#hero").offsetHeight;
+    if(window.scrollY > heroHeight){
+      siteheader.classList.add("scrollcolour");
+    }if(window.scrollY < heroHeight){
+      siteheader.classList.remove("scrollcolour");
+    }
   }
+}else{
+  siteheader.classList.add("scrollcolour");
 }
 
 window.addEventListener('scroll', headerScroll);

@@ -29,15 +29,17 @@ main{
     flex-direction: column;
 
     @media #{$desktop}{
-        padding: 50px 70px;
+        padding: 50px 0px;
         flex-direction: row;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 }
 
 .button{
     display: block;
-    margin-top: 50px;
-    padding: 21px 34px;
+    margin-top: 40px;
+    padding: 16px 20px;
     max-width: 225px;
     background-color: $electric-yellow;
     color: $charcoal;
@@ -46,6 +48,7 @@ main{
     text-transform: uppercase;
     font-family: 'OpenSans-regular';
     font-size: 16px;
+    border-radius: 4px;
 }
 
 .subtitle{
@@ -79,6 +82,7 @@ main{
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-column-gap: 75px;
-		padding: 50px 25px;
+		padding: 50px 0;
+    max-width: 1200px;
 	}
 }
