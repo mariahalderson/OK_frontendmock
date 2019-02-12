@@ -41,6 +41,9 @@ header{
 
         img{
             max-width: 100%;
+            @media #{$desktop}{
+              margin-left: -12px;
+            }
         }
     }
 
@@ -60,6 +63,7 @@ header{
             flex-direction: row;
             align-items: center;
             position: static;
+            margin-right: -14px;
             height: auto;
             width: auto;
             background-color: transparent;
@@ -104,8 +108,8 @@ header{
                 margin: 10px 0px;
 
                 @media #{$desktop}{
-                    display: grid;
-                    grid-template-columns: repeat(5, 1fr);
+                    // display: grid;
+                    // grid-template-columns: repeat(5, 1fr);
                     position: fixed;
                     top: 56px;
                     left: 0px;
@@ -118,6 +122,15 @@ header{
                     transition: 0.5s ease-in;
                 }
 
+                .nav-container{
+                  @media #{$desktop}{
+                    display: grid;
+                    grid-template-columns: repeat(5, 1fr);
+                    max-width: 1200px;
+                    margin: 0 auto;
+                  }
+                }
+
                 .subnav-title{
                     display: none;
 
@@ -127,7 +140,7 @@ header{
                     grid-row-start: 1;
                     max-width: 280px;
                     margin-right:0;
-                    margin-left: 16px;
+                    //margin-left: 16px;
                 }
 
                     .title{
@@ -146,7 +159,8 @@ header{
                     margin: 8px 0px;
 
                     @media #{$desktop}{
-                        padding: 0px 10px;
+                        //padding: 0px 10px;
+                        padding-left: 16px;
                         display: flex;
                         flex-direction: column;
                         //justify-content: space-between;

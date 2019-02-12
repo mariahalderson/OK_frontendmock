@@ -27,6 +27,7 @@ footer{
 
 		@media #{$desktop}{
 			max-width: 60%;
+			justify-self: start;
 		}
 
 		.logo-container{
@@ -66,6 +67,7 @@ footer{
 
 		@media #{$desktop}{
 			width: 60%;
+			justify-self: end;
 			//display: block;
 		}
 
@@ -103,7 +105,7 @@ footer{
 		}
 
 		@media #{$desktop}{
-			width: 80%;
+			width: 100%;
 			grid-column: 1 / -1;
 		}
 

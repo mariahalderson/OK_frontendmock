@@ -375,6 +375,11 @@ header #headerLogo {
 header #headerLogo img {
   max-width: 100%;
 }
+@media screen and (min-width: 850px) {
+  header #headerLogo img {
+    margin-left: -12px;
+  }
+}
 header #mainNavigation {
   position: fixed;
   overflow: hidden;
@@ -391,6 +396,7 @@ header #mainNavigation {
     flex-direction: row;
     align-items: center;
     position: static;
+    margin-right: -14px;
     height: auto;
     width: auto;
     background-color: transparent;
@@ -435,8 +441,6 @@ header #mainNavigation .navitem .subnav {
 }
 @media screen and (min-width: 850px) {
   header #mainNavigation .navitem .subnav {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
     position: fixed;
     top: 56px;
     left: 0px;
@@ -446,6 +450,14 @@ header #mainNavigation .navitem .subnav {
     overflow: hidden;
     background-color: #fff;
     transition: 0.5s ease-in;
+  }
+}
+@media screen and (min-width: 850px) {
+  header #mainNavigation .navitem .subnav .nav-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
 header #mainNavigation .navitem .subnav .subnav-title {
@@ -458,7 +470,6 @@ header #mainNavigation .navitem .subnav .subnav-title {
     grid-row-start: 1;
     max-width: 280px;
     margin-right: 0;
-    margin-left: 16px;
   }
 }
 header #mainNavigation .navitem .subnav .subnav-title .title {
@@ -475,7 +486,7 @@ header #mainNavigation .navitem .subnav li {
 }
 @media screen and (min-width: 850px) {
   header #mainNavigation .navitem .subnav li {
-    padding: 0px 10px;
+    padding-left: 16px;
     display: flex;
     flex-direction: column;
     height: 250px;
@@ -785,6 +796,7 @@ footer {
 @media screen and (min-width: 850px) {
   footer .footer_brandinfo {
     max-width: 60%;
+    justify-self: start;
   }
 }
 footer .footer_brandinfo .logo-container {
@@ -824,6 +836,7 @@ footer .footer_navigation {
 @media screen and (min-width: 850px) {
   footer .footer_navigation {
     width: 60%;
+    justify-self: end;
   }
 }
 footer .footer_navigation div {
@@ -858,7 +871,7 @@ footer .footer_socialnavigation {
 }
 @media screen and (min-width: 850px) {
   footer .footer_socialnavigation {
-    width: 80%;
+    width: 100%;
     grid-column: 1/-1;
   }
 }
@@ -885,11 +898,19 @@ footer .footer_socialnavigation ul li a {
   background-position: center;
   background-size: cover;
 }
+.hero .sitesection {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 .hero .title-block {
   background-color: #1336c8;
   padding: 25px 15px;
   margin-top: 50px;
   height: fit-content;
+}
+.hero .title-block .titleblock_subtitle {
+  color: #fff;
 }
 @media screen and (min-width: 850px) {
   .hero .title-block {
@@ -914,7 +935,6 @@ h4, h2 {
 
 .section-column {
   margin-top: 40px;
-  padding: 0 15px;
 }
 
 .icon-container {
@@ -976,7 +996,7 @@ h4, h2 {
 }
 @media screen and (min-width: 850px) {
   #finalSection {
-    padding: 50px 40px;
+    padding: 50px 0px;
   }
 }
 @media screen and (min-width: 1080px) {
@@ -1161,15 +1181,17 @@ main {
 }
 @media screen and (min-width: 850px) {
   .sitesection {
-    padding: 50px 70px;
+    padding: 50px 0px;
     flex-direction: row;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
 
 .button {
   display: block;
-  margin-top: 50px;
-  padding: 21px 34px;
+  margin-top: 40px;
+  padding: 16px 20px;
   max-width: 225px;
   background-color: #ffe371;
   color: #28272a;
@@ -1178,6 +1200,7 @@ main {
   text-transform: uppercase;
   font-family: "OpenSans-regular";
   font-size: 16px;
+  border-radius: 4px;
 }
 
 .subtitle {
@@ -1208,7 +1231,8 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 75px;
-    padding: 50px 25px;
+    padding: 50px 0;
+    max-width: 1200px;
   }
 }
 
